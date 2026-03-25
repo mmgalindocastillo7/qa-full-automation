@@ -7,8 +7,11 @@ export default defineConfig({
   reporter: [['html', { open: 'never' }]],
 
   use: {
-    headless: true,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-  },
-});
+  baseURL: 'https://www.saucedemo.com/',
+
+  headless: true,
+
+  screenshot: 'only-on-failure',
+  video: 'retain-on-failure',
+  trace: 'on-first-retry',
+}
